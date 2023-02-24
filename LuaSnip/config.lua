@@ -1,4 +1,5 @@
--- require("luasnip.loaders.from_lua").load({paths = "~/AppData/Local/nvim/LuaSnip/"})
+local ls = require("luasnip")
+local s = ls.snippet
 
 -- Somewhere in your Neovim startup, e.g. init.lua
 require("luasnip").config.set_config({ -- Setting LuaSnip config

@@ -4,6 +4,7 @@ call plug#begin()
 
 " follow latest release and install jsregexp.
 Plug 'L3MON4D3/LuaSnip', {'do': 'make install_jsregexp'}
+
 call plug#end()
 
 set number "Zeilennummer anzeigen
@@ -19,7 +20,8 @@ imap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '
 smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
 
 
-"Laden der all.lua Datei
-lua require("luasnip.loaders.from_lua").load({paths = "~/AppData/Local/nvim/LuaSnip/"})
+"Angabe des Ordners für das Laden der .lua Dateien
+lua require("luasnip.loaders.from_lua").lazy_load({paths = "~/AppData/Local/nvim/LuaSnip/"})
+"Externe Konfigurationsdatei (lua) einbinden
 luafile  ~/AppData/Local/nvim/LuaSnip/config.lua
 

@@ -3,14 +3,14 @@
 return {
   -- A snippet that expands the trigger "hi" into the string "Hello, world!".
   require("luasnip").snippet(
-    { trig = "sehr" },
-    { t("Sehr geehrter Herr!") }
+    { trig = "for" },
+    { t("for schleife!") }
   ),
 
   -- To return multiple snippets, use one `return` statement per snippet file
   -- and return a table of Lua snippets.
   require("luasnip").snippet(
-    { trig = "mfg" },
-    { t("Mit freundlichen Grüßen") }
+    { trig = "while" },
+    { t("While schleife.") }
   ),
 }
