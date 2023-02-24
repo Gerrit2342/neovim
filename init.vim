@@ -10,6 +10,8 @@ call plug#end()
 set number "Zeilennummer anzeigen
 inoremap jj <esc> 
 
+let g:tex_flavor = "latex" "Texdateien nicht als Plaintex interpretieren
+
 "Abschnitt für LuaSnip einen Snippet-Manager (LaTeX)
 " Use Tab to expand and jump through snippets
 imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
