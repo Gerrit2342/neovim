@@ -36,13 +36,19 @@ s({trig="ll", dscr="'\\label{} einfuegen'", snippetType="autosnippet"},
   )
 ),
 
-s({trig="ref", dscr="'\\ref{} einfuegen'", snippetType="autosnippet"},
+s({trig="re", dscr="'\\ref{} einfuegen'", snippetType="autosnippet"},
   fmta(
     "\\ref{<>}",
     { i(1) }
   )
 ),
 
+s({trig="to", dscr="'\\todo{} einfuegen'", snippetType="autosnippet"},
+  fmta(
+    "\\todo{<>}",
+    { i(1) }
+  )
+),
 s({trig="sec", dscr="'\\section{} einfuegen'", snippetType="autosnippet"},
   fmta(
     "\\section{<>}",

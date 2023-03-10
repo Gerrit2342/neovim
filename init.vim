@@ -2,14 +2,21 @@
 call plug#begin()
 "Hier folgen die zu ladenden Plugins
 
-" follow latest release and install jsregexp.
-Plug 'L3MON4D3/LuaSnip', {'do': 'make install_jsregexp'}
+Plug 'L3MON4D3/LuaSnip', {'do': 'make install_jsregexp'} "Snippet Manager
 Plug 'lervag/vimtex'
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocompletion
 call plug#end()
 
 set number "Zeilennummer anzeigen
+set signcolumn=yes
+
+filetype on
+filetype plugin on
+filetype indent on
+
 inoremap jk <Esc> 
+noremap j gj
+noremap k gk
 
 let g:tex_flavor = "latex" "Texdateien nicht als Plaintex interpretieren
 
@@ -28,6 +35,10 @@ lua require("luasnip.loaders.from_lua").lazy_load({paths = "~/AppData/Local/nvim
 "Externe Konfigurationsdatei (lua) einbinden
 luafile  ~/AppData/Local/nvim/LuaSnip/config.lua
 
-filetype on
-filetype plugin on
-filetype indent on
+"Abschnitt für coc.nvim eine Autocompletion Engine
+"ctrl +j um durch die Vorschläge zu wandern
+inoremap <silent><expr> <C-j>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
