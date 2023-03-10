@@ -5,10 +5,11 @@ call plug#begin()
 " follow latest release and install jsregexp.
 Plug 'L3MON4D3/LuaSnip', {'do': 'make install_jsregexp'}
 Plug 'lervag/vimtex'
+
 call plug#end()
 
 set number "Zeilennummer anzeigen
-inoremap jk <esc> 
+inoremap jk <Esc> 
 
 let g:tex_flavor = "latex" "Texdateien nicht als Plaintex interpretieren
 
@@ -30,5 +31,3 @@ luafile  ~/AppData/Local/nvim/LuaSnip/config.lua
 filetype on
 filetype plugin on
 filetype indent on
-let g:vimtex_cache_persistent=0
-let maplocalleader = ","
