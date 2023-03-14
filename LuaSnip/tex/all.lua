@@ -20,10 +20,25 @@ s({trig="pp", dscr="'\\usepackage{} einfuegen'", snippetType="autosnippet"},
   )
 ),
 
-
-s({trig="cc", dscr="\\cite{} einfuegen", snippetType="autosnippet"},
+-- Zitationsbefehle
+s({trig="cc", dscr="\\autocite{} einfuegen", snippetType="autosnippet"},
   fmta(
-    "\\cite{<>}",
+    "\\autocite{<>}",
+    { i(1) }
+  )
+),
+
+s({trig="ct", dscr="\\textcite{} einfuegen", snippetType="autosnippet"},
+  fmta(
+    "\\textcite{<>}",
+    { i(1) }
+  )
+),
+
+
+s({trig="cp", dscr="\\parencite{} einfuegen", snippetType="autosnippet"},
+  fmta(
+    "\\parencite[vgl.][]{<>}",
     { i(1) }
   )
 ),
@@ -36,9 +51,9 @@ s({trig="ll", dscr="'\\label{} einfuegen'", snippetType="autosnippet"},
   )
 ),
 
-s({trig="re", dscr="'\\ref{} einfuegen'", snippetType="autosnippet"},
+s({trig="ref", dscr="'\\ref{} einfuegen'", snippetType="autosnippet"},
   fmta(
-    "\\ref{<>}",
+    "(Abb. \\ref{<>})",
     { i(1) }
   )
 ),
@@ -56,11 +71,7 @@ s({trig="sec", dscr="'\\section{} einfuegen'", snippetType="autosnippet"},
   )
 ),
 
-
-
-
-
-s({trig="envddd", snippetType="autosnippet"},
+s({trig="env", snippetType="autosnippet"},
   fmta(
     [[
       \begin{<>}
@@ -71,6 +82,24 @@ s({trig="envddd", snippetType="autosnippet"},
       i(1),
       i(2),
       rep(1),  -- this node repeats insert node i(1)
+    }
+  )
+),
+
+s({trig="fig", snippetType="autosnippet"},
+  fmta(
+    [[
+      \begin{figure}[h]
+      \centering
+      \includegraphics{<>}
+      \caption{<>}
+      \label{<>}
+      \end{figure}
+    ]],
+    {
+      i(1),
+      i(2),
+      i(3),
     }
   )
 )

@@ -14,7 +14,9 @@ filetype on
 filetype plugin on
 filetype indent on
 
-inoremap jk <Esc> 
+inoremap jj <Esc> 
+"Quicksave
+nnoremap WW :w<CR>
 noremap j gj
 noremap k gk
 

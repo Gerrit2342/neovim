@@ -21,7 +21,7 @@ s({trig="mfg", snippetType="autosnippet"},
       )
 ),
 
-s({trig="vg", snippetType="autosnippet"},
+s({trig="VG", snippetType="autosnippet"},
   fmta(
 	[[
 	Viele Grüße
