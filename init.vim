@@ -41,4 +41,5 @@ inoremap <silent><expr> <C-j>
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
+inoremap <expr><C-h> coc#pum#visible() ? coc#pum#confirm() : "\<C-k>"
