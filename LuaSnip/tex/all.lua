@@ -23,25 +23,34 @@ s({trig="pp", dscr="'\\usepackage{} einfuegen'", snippetType="autosnippet"},
 -- Zitationsbefehle
 s({trig="cc", dscr="\\autocite{} einfuegen", snippetType="autosnippet"},
   fmta(
-    "\\autocite{<>}",
-    { i(1) }
+    "\\autocite[<>][<>]{<>}",
+    { i(2, "vgl." ),
+    i(3, "S."),
+    i(1, "Autor"),
+    }
   )
 ),
 
 s({trig="ct", dscr="\\textcite{} einfuegen", snippetType="autosnippet"},
   fmta(
-    "\\textcite{<>}",
-    { i(1) }
+    "\\textcite[<>][<>]{<>}",
+    { i(2, "vgl." ),
+    i(3, "S."),
+    i(1, "Autor"),
+    }
   )
 ),
 
 
-s({trig="cp", dscr="\\parencite{} einfuegen", snippetType="autosnippet"},
-  fmta(
-    "\\parencite[vgl.][]{<>}",
-    { i(1) }
-  )
-),
+-- s({trig="cp", dscr="\\parencite{} einfuegen", snippetType="autosnippet"},
+--   fmta(
+--     "\\parencite[<>][<>]{<>}",
+--     { i(2, "vgl." ),
+--     i(3, "S."),
+--     i(1, "Autor"),
+--     }
+--   )
+-- ),
 
 
 s({trig="ll", dscr="'\\label{} einfuegen'", snippetType="autosnippet"},
