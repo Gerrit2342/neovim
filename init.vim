@@ -44,3 +44,20 @@ inoremap <silent><expr> <C-j>
       \ coc#refresh()
 inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
 inoremap <expr><C-h> coc#pum#visible() ? coc#pum#confirm() : "\<C-k>"
+
+"Compiler Optionen für Vimtex
+ let g:vimtex_compiler_latexmk = {
+        \ 'build_dir' : '',
+        \ 'callback' : 1,
+        \ 'continuous' : 1,
+        \ 'executable' : 'latexmk',
+        \ 'hooks' : [],
+        \ 'options' : [
+        \   '-verbose',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+	\   '-auxdir=/tmp',
+        \ ],
+        \}
+
