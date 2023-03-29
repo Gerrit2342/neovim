@@ -37,6 +37,27 @@ s({trig="lg", snippetType="autosnippet"},
 	Gerrit
 	]],{}
       )
-)
+),
 
+s({trig="zb", snippetType="autosnippet"},
+  fmta(
+	[[
+	z. B.
+	]],{}
+      )
+),
+
+s({trig="bf", snippetType="autosnippet"},
+  fmta(
+	"\\textbf{<>}",
+	{i(1)}
+      )
+),
+
+s({trig="it", snippetType="autosnippet"},
+  fmta(
+	"\\textit{<>}",
+	{i(1)}
+      )
+)
 }

@@ -13,6 +13,13 @@ set signcolumn=yes
 filetype on
 filetype plugin on
 filetype indent on
+set cursorline 
+
+" Change Color when entering Insert Mode
+autocmd InsertEnter * highlight CursorLine guifg=white guibg=blue ctermfg=white ctermbg=blue
+" Revert Color to default when leaving Insert Mode
+autocmd InsertLeave * highlight default 
+":h highlight
 
 inoremap jj <Esc>
 nnoremap WW :w<CR>
@@ -57,7 +64,6 @@ inoremap <expr><C-h> coc#pum#visible() ? coc#pum#confirm() : "\<C-k>"
         \   '-file-line-error',
         \   '-synctex=1',
         \   '-interaction=nonstopmode',
-	\   '-auxdir=/tmp',
         \ ],
         \}
 

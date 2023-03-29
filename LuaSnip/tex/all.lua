@@ -53,7 +53,7 @@ s({trig="ct", dscr="\\textcite{} einfuegen", snippetType="autosnippet"},
 -- ),
 
 
-s({trig="ll", dscr="'\\label{} einfuegen'", snippetType="autosnippet"},
+s({trig="LL", dscr="'\\label{} einfuegen'", snippetType="autosnippet"},
   fmta(
     "\\label{<>}",
     { i(1) }
